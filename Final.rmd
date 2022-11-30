@@ -51,6 +51,13 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 This bar chart shows that the men who got covid and got infected with the placebo are about 60% and the ones who got the vaccine got infected by about 30%. 
 
 ## Numerical
+```{r}
+table1 <- xtabs(~infected + treatment, data=M)
+rowPerc(table1)
+colPerc(table1)
+```
+
+So the men who took the placebo and got infected is 68.44% and the ones who took the vaccine only 31.56% got infected.
 
 ## Inferential 
 
