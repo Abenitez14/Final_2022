@@ -60,6 +60,14 @@ colPerc(table1)
 So the men who took the placebo and got infected is 68.44% and the ones who took the vaccine only 31.56% got infected.
 
 ## Inferential 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+Mfish <- fisher.test(table1)
+Mfish
+```
+
+For men the 95 percent confidence interval is 1.732 for the placebo and 2.752 for the vaccine the odds ratio is 2.178 the p value = 2.364e-12.
 
 ## Females
 
