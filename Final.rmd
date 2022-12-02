@@ -154,6 +154,30 @@ colPerc(table1)
 The people who got covid and took the placebo only 13% got sick and the for the ones who had the vaccine only 87% got sick.
 
 ## Inferential 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+gayfish <- fisher.test(table1)
+gayfish
+```
+
+The p-value that i got was 1e-08 the 95 percent confidence intervals are 0.066 and 0.344 the odds ratio is 0.16.
+
+```{r}
+effect <- gayfish$p.value/(gayfish$p.value +1)
+effectivenessgay = gayfish$estimate/(gayfish$estimate +1)*100
+print(effectivenessgay)
+```
+
+The odds of this truly working is 14.
+
+```{r}
+low=(gayfish$conf.int[1]/(gayfish$conf.int[1] +1))*100
+hi=(gayfish$conf.int[2]/(gayfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+The highest is 25.613 and the lowest is 6.201
 
 ## Druggies
 
