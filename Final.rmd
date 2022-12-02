@@ -182,6 +182,15 @@ The highest is 25.613 and the lowest is 6.201
 ## Druggies
 
 ## Graphical
+```{r}
+basic <- Druguser %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+basicC <- ggplot(basic,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+basicCC <- ggplot(basic,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+The drug users who got covid and took the placebo only about 15% got sick and the ones who got the vaccine about 83% of them got sick. and of the ones who didn't get sick there results were 50/50.
 
 ## Numerical
 
