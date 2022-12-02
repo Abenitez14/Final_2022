@@ -104,9 +104,32 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-The females who had covid 
+The females who had covid only 42% had the placebo and the ones that had the vaccine only 57% of them got sick.
 
 ## Inferential
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+Ffish <- fisher.test(table1)
+Ffish
+```
+
+The p value = 0.005, the 95 percent confidence intervals are 0.60 and 0.92 the odds ratio 0.74. 
+```{r}
+effect <- Ffish$p.value/(Ffish$p.value +1)
+effectivenessF = Ffish$estimate/(Ffish$estimate +1)*100
+print(effectivenessF)
+```
+
+the odds ratio is 43
+
+```{r}
+low=(Ffish$conf.int[1]/(Ffish$conf.int[1] +1))*100
+hi=(Ffish$conf.int[2]/(Ffish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+The hi variable is 47.858 and the low is 37.337
 
 ## LGBTQ
 
