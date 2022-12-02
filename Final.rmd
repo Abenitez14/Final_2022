@@ -202,11 +202,30 @@ colPerc(table1)
 for the drug users that got covid and had the placebo only about 17% sick and the ones that had the vaccine about only 83% got sick. For the drug users who didn't get sick 49% percent who didn't get sick and the ones who had the vaccine there was about 51% of them.
 
 ## Inferential 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+Druguserfish <- fisher.test(table1)
+Druguserfish
+```
 
+The p value that i got from the fisher test is 3e-07 the 95 percent confidence intervals are 0.094 and 0.418 the odds ratio is 0.21.
 
+```{r}
+effect <- Druguserfish$p.value/(Druguserfish$p.value +1)
+effectivenessDruguser = Druguserfish$estimate/(Druguserfish$estimate +1)*100
+print(effectivenessDruguser)
+```
 
+The odds ratio of the vaccine and drug users is about 17.
 
+```{r}
+low=(Druguserfish$conf.int[1]/(Druguserfish$conf.int[1] +1))*100
+hi=(Druguserfish$conf.int[2]/(Druguserfish$conf.int[2] +1))*100
+options(digits=2)
+```
 
+The high is 29.473 and the low is 8.571.
 
 # Overall Results and Conclusions
 
