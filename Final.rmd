@@ -145,6 +145,13 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 The ones who got covid and took the placebo and got infected was about 10% and the ones who took the vaccine and got infected were about 78%. The ones who took the placebo and didn't get infected there was only 49% and the ones who took the vaccine and didn't get infected are about 50%.
 
 ## Numerical
+```{r}
+table1 <- xtabs(~infected + treatment, data=gay)
+rowPerc(table1)
+colPerc(table1)
+```
+
+The people who got covid and took the placebo only 13% got sick and the for the ones who had the vaccine only 87% got sick.
 
 ## Inferential 
 
