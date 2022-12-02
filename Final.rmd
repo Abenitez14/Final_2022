@@ -229,5 +229,6 @@ The high is 29.473 and the low is 8.571.
 
 # Overall Results and Conclusions
 
+From the looks of our data in just the graphical part the vaccine worked better on men who weren't drug users and weren't gay the bar chart shows that the men who got covid and got infected with the placebo are about 60% and the ones who got the vaccine got infected by about 30%. The females who had covid and took the vaccine about 58% of them got sick and the ones who took the placebo about 42% got covid and the ones who didn't get sick the ones who got the placebo it is about 50% and about 49% took the vaccine. The ones who got covid and took the placebo and got infected was about 10% and the ones who took the vaccine and got infected were about 78%. The ones who took the placebo and didn't get infected there was only 49% and the ones who took the vaccine and didn't get infected are about 50%. The drug users who got covid and took the placebo only about 15% got sick and the ones who got the vaccine about 83% of them got sick. and of the ones who didn't get sick there results were 50/50.
 
 
