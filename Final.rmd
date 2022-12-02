@@ -68,6 +68,20 @@ Mfish
 ```
 
 For men the 95 percent confidence interval is 1.732 for the placebo and 2.752 for the vaccine the odds ratio is 2.178 the p value = 2.364e-12.
+```{r}
+effect <- Mfish$p.value/(Mfish$p.value +1)
+effectivenessM = Mfish$estimate/(Mfish$estimate +1)*100
+print(effectivenessM)
+```
+The odds ratio is 68.534.
+
+```{r}
+low=(Mfish$conf.int[1]/(Mfish$conf.int[1] +1))*100
+hi=(Mfish$conf.int[2]/(Mfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+The hi is 73.347 and the low is 63.401
 
 ## Females
 
@@ -84,6 +98,13 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 The females who had covid and took the vaccine about 58% of them got sick and the ones who took the placebo about 42% got covid and the ones who didn't get sick the ones who got the placebo it is about 50% and about 49% took the vaccine.
 
 ## Numerical
+```{r}
+table1 <- xtabs(~infected + treatment, data=F)
+rowPerc(table1)
+colPerc(table1)
+```
+
+The females who had covid 
 
 ## Inferential
 
